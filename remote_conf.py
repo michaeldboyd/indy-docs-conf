@@ -63,7 +63,7 @@ def generate_sidebar(conf, conf_api):
 
 def get_intersphinx_mapping():
     return {
-        'sovrin': ('http://sovrin.readthedocs.io/en/%s/' % rtd_version, None),
-        'indy-sdk': ('http://indy-sdk.readthedocs.io/en/%s/' % rtd_version, None),
-        'indy-node': ('http://indy-node.readthedocs.io/en/%s/' % rtd_version, None),
+        'sovrin': ('http://sovrin.readthedocs.io/en/%s/' % version, None),
+        'indy-sdk': ('http://indy-sdk.readthedocs.io/en/%s/' % version, None),
+        'indy-node': ('http://indy-node.readthedocs.io/en/%s/' % version, None),
     }
