@@ -61,7 +61,7 @@ def generate_sidebar(conf, conf_api):
 
     write_if_changed('toc.rst', '\n'.join(lines))
 
-def get_intersphinx_mapping():
+def get_intersphinx_mapping(version):
     return {
         'sovrin': ('http://sovrin.readthedocs.io/en/%s/' % version, None),
         'indy-sdk': ('http://indy-sdk.readthedocs.io/en/%s/' % version, None),
