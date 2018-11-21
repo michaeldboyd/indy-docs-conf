@@ -55,7 +55,7 @@ def generate_sidebar(conf, conf_api):
     write('Build Instructions', 'build-scripts/ubuntu-1604/README')
 
     toctree('Repositories', 2)
-    write_api('node', 'Indy Node', 'indy-node')
+    write_api('node', 'Indy Node', 'index')
     write_api('sdk', 'Indy SDK', 'index')
     endl()
 
