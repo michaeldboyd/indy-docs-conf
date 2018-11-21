@@ -33,7 +33,7 @@ def generate_sidebar(conf, conf_api):
 
     def write(desc, link):
         if conf_api == 'sovrin':
-            args = desc, ("../" + link)
+            args = desc,  link
         # elif not do_gen:
         #     return
         else:
@@ -47,7 +47,7 @@ def generate_sidebar(conf, conf_api):
             args = desc, project, version, link
             lines.append('    %s <https://sovrin.readthedocs.io/projects/%s/en/%s/%s.html>' % args)
         else:
-            lines.append('    %s <%s>' % (desc, "../" + link))
+            lines.append('    %s <%s>' % (desc, link))
     
 
     toctree('Sovrin', 2)
