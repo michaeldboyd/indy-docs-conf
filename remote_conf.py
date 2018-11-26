@@ -55,8 +55,9 @@ def generate_sidebar(conf, conf_api):
     write('Build Instructions', 'build-scripts/ubuntu-1604/README')
 
     toctree('Repositories', 2)
-    write_api('node', 'Indy Node', 'index')
     write_api('sdk', 'Indy SDK', 'index')
+    write_api('node', 'Indy Node', 'index')
+    write_api('agent', 'Indy Agent', 'index')
     endl()
 
     write_if_changed('toc.rst', '\n'.join(lines))
@@ -66,4 +67,5 @@ def get_intersphinx_mapping(version):
         'sovrin': ('http://sovrin.readthedocs.io/en/%s/' % version, None),
         'indy-sdk': ('http://indy-sdk.readthedocs.io/en/%s/' % version, None),
         'indy-node': ('http://indy-node.readthedocs.io/en/%s/' % version, None),
+        'indy-agent': ('http://indy-agent.readthedocs.io/en/%s' % version, None),
     }
