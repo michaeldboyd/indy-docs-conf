@@ -58,6 +58,7 @@ def generate_sidebar(conf, conf_api):
     write_api('sdk', 'Indy SDK', 'index')
     write_api('node', 'Indy Node', 'index')
     write_api('agent', 'Indy Agent', 'index')
+    write_api('plenum', 'Indy Plenum', 'index')
     endl()
 
     write_if_changed('toc.rst', '\n'.join(lines))
@@ -68,4 +69,5 @@ def get_intersphinx_mapping(version):
         'indy-sdk': ('http://indy-sdk.readthedocs.io/en/%s/' % version, None),
         'indy-node': ('http://indy-node.readthedocs.io/en/%s/' % version, None),
         'indy-agent': ('http://indy-agent.readthedocs.io/en/%s' % version, None),
+        'indy-plenum': ('http://indy-plenum.readthedocs.io/en/%s' % version, None),
     }
