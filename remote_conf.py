@@ -51,8 +51,8 @@ def generate_sidebar(conf, conf_api):
     
 
     toctree('Sovrin', 2)
+    write('Introduction', 'introduction')
     write('Release Notes', 'release-notes')
-    write('Build Instructions', 'build-scripts/ubuntu-1604/README')
 
     toctree('Repositories', 2)
     write_api('sdk', 'Indy SDK', 'index')
