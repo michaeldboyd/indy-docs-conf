@@ -32,12 +32,12 @@ def generate_sidebar(conf, conf_api):
         lines.append('')
 
     def write(desc, link):
-        if conf_api == 'sovrin':
+        if conf_api == 'indy':
             args = desc,  link
         # elif not do_gen:
         #     return
         else:
-            args = desc, 'https://sovrin.readthedocs.io/en/%s/%s.html' % (version, link)
+            args = desc, 'https://indy.readthedocs.io/en/%s/%s.html' % (version, link)
             
         lines.append('    %s <%s>' % args)
 
@@ -45,14 +45,13 @@ def generate_sidebar(conf, conf_api):
         if project != conf_api:
             # if do_gen:
             args = desc, project, version, link
-            lines.append('    %s <https://sovrin.readthedocs.io/projects/%s/en/%s/%s.html>' % args)
+            lines.append('    %s <https://indy.readthedocs.io/projects/%s/en/%s/%s.html>' % args)
         else:
             lines.append('    %s <%s>' % (desc, link))
     
 
-    toctree('Sovrin', 2)
-    write('Introduction', 'introduction')
-    write('Release Notes', 'release-notes')
+    toctree('Indy', 2)
+    write('Introduction', 'index')
 
     toctree('Repositories', 2)
     write_api('sdk', 'Indy SDK', 'index')
@@ -65,7 +64,7 @@ def generate_sidebar(conf, conf_api):
 
 def get_intersphinx_mapping(version):
     return {
-        'sovrin': ('http://sovrin.readthedocs.io/en/%s/' % version, None),
+        'indy': ('http://indy.readthedocs.io/en/%s/' % version, None),
         'indy-sdk': ('http://indy-sdk.readthedocs.io/en/%s/' % version, None),
         'indy-node': ('http://indy-node.readthedocs.io/en/%s/' % version, None),
         'indy-agent': ('http://indy-agent.readthedocs.io/en/%s' % version, None),
