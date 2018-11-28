@@ -31,19 +31,16 @@ def generate_sidebar(conf, conf_api):
     def endl():
         lines.append('')
 
-    def write(desc, link):
+    def write_item(desc, link):
         if conf_api == 'indy':
             args = desc,  link
-        # elif not do_gen:
-        #     return
         else:
             args = desc, 'https://indy.readthedocs.io/en/%s/%s.html' % (version, link)
             
         lines.append('    %s <%s>' % args)
 
-    def write_api(project, desc, link):
+    def write_subproject(project, desc, link):
         if project != conf_api:
-            # if do_gen:
             args = desc, project, version, link
             lines.append('    %s <https://indy.readthedocs.io/projects/%s/en/%s/%s.html>' % args)
         else:
@@ -51,13 +48,13 @@ def generate_sidebar(conf, conf_api):
     
 
     toctree('Indy', 2)
-    write('Introduction', 'index')
+    write_item('Introduction', 'index')
 
     toctree('Repositories', 2)
-    write_api('sdk', 'Indy SDK', 'index')
-    write_api('node', 'Indy Node', 'index')
-    write_api('agent', 'Indy Agent', 'index')
-    write_api('plenum', 'Indy Plenum', 'index')
+    write_subproject('sdk', 'Indy SDK', 'index')
+    write_subproject('node', 'Indy Node', 'index')
+    write_subproject('agent', 'Indy Agent', 'index')
+    write_subproject('plenum', 'Indy Plenum', 'index')
     endl()
 
     write_if_changed('toc.rst', '\n'.join(lines))
