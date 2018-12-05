@@ -70,5 +70,5 @@ def get_intersphinx_mapping(version):
         'indy-agent': ('http://indy-agent.readthedocs.io/en/%s' % version, None),
         'indy-plenum': ('http://indy-plenum.readthedocs.io/en/%s' % version, None),
         'indy-crypto': ('http://indy-crypto.readthedocs.io/en/%s' % version, None),
-        'indy-hipe': ('http://indy-hipe.readthedocs.io/en/%s' % version, None),
+        'indy-hipe': ('http://hipe.readthedocs.io/en/%s' % version, None),
     }
